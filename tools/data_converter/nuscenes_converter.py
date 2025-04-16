@@ -18,7 +18,7 @@ nus_categories = ('car', 'truck', 'trailer', 'bus', 'construction_vehicle',
 
 def create_nuscenes_infos(root_path,
                           info_prefix,
-                          version='v1.0-trainval',
+                          version='v1.0-mini',
                           max_sweeps=10):
     """Create info file of nuscene dataset.
 

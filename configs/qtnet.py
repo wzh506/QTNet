@@ -52,8 +52,8 @@ test_pipeline = [
         ])
 ]
 data = dict(
-    samples_per_gpu=2,
-    workers_per_gpu=4,
+    samples_per_gpu=1,
+    workers_per_gpu=0, #防止卡死
     train=dict(
         type=dataset_type,
         num_frames=num_frames,

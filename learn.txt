@@ -1,0 +1,14 @@
+
+
+1.注意事项
+运行环境：conda: bevfusion 
+在根目录下运行：pip install -v -e .  才能编译mmdet3d的ops
+export LD_LIBRARY_PATH=LD_LIBRARY_PATH:/usr/local/cuda-11.1/lib64 
+export PATH=/usr/local/cuda-11.1/bin:$PATH 
+export CUDA_HOME=/usr/local/cuda
+降低算力：export TORCH_CUDA_ARCH_LIST="8.0"
+报错：error: no instance of overloaded function "at::Tensor::index_put_" matches the argument list
+修改方法：https://github.com/XuyangBai/TransFusion/issues/58，建议别折磨自己了，以后少用mmdet3d的库
+
+2.运行方法
+bash tools/dist_train.sh configs/qtnet.py 2 --work-dir work_dirs/qtnet_4frames/
